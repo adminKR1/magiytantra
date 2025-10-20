@@ -1,0 +1,304 @@
+/* ===== ОБЩИЕ НАСТРОЙКИ ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at 20% 20%, #0c0418, #050008 80%);
+  color: #e0d9ff;
+  font-family: 'Spectral', serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ===== ШАПКА ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 0, 20, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 1.6em;
+  color: #c9a0ff;
+  text-shadow: 0 0 12px rgba(170, 90, 255, 0.8);
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: #e8d8ff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 1.05em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #b58cff;
+}
+
+/* ===== HERO БЛОК ===== */
+.hero {
+  padding: 160px 20px 100px;
+  text-align: center;
+}
+
+.hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.hero-photo img {
+  width: 320px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(160, 100, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(180, 120, 255, 0.6);
+}
+
+.hero-text h1 {
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 2.8em;
+  color: #f4ecff;
+  text-shadow: 0 0 18px rgba(180, 110, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: #cfa0ff;
+}
+
+.hero-text p {
+  max-width: 520px;
+  margin: 0 auto 25px;
+  color: #d8c8ff;
+  font-size: 1.1em;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  border: 1px solid #bfa0ff;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(45deg, #6f36ff, #a364ff);
+  box-shadow: 0 0 20px rgba(150, 90, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(180, 100, 255, 0.8);
+}
+
+/* ===== РАЗДЕЛЫ ===== */
+section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 2.4em;
+  color: #dfb6ff;
+  margin-bottom: 40px;
+  text-shadow: 0 0 20px rgba(180, 120, 255, 0.5);
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  background: rgba(40, 10, 80, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  color: #e4d8ff;
+  font-size: 1.1em;
+}
+
+/* ===== PRACTICES ===== */
+.practices {
+  background: rgba(30, 0, 60, 0.3);
+}
+
+.practice-list {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.practice-list p {
+  margin-bottom: 14px;
+  color: #e6d8ff;
+  font-size: 1.05em;
+  border-left: 2px solid #955cff;
+  padding-left: 12px;
+  transition: transform 0.2s ease;
+}
+
+.practice-list p:hover {
+  transform: translateX(4px);
+  color: #fff;
+}
+
+/* ===== CONTACTS ===== */
+.contacts {
+  background: rgba(20, 0, 40, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contacts p {
+  font-size: 1.05em;
+  color: #e6d8ff;
+  margin-bottom: 12px;
+}
+
+.contacts a {
+  color: #cfa8ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contacts a:hover {
+  color: #fff;
+}
+
+.note {
+  margin-top: 30px;
+  font-style: italic;
+  color: #bfa0ff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: rgba(10, 0, 25, 0.9);
+  padding: 25px 0;
+  text-align: center;
+  color: #a890ff;
+  font-size: 0.95em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2em;
+  }
+
+  section {
+    padding: 80px 7%;
+  }
+
+  .practice-list {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  nav a {
+    margin-left: 15px;
+    font-size: 0.95em;
+  }
+
+  .hero-photo img {
+    width: 260px;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+}
+/* ===== LIGHT MAGIC ===== */
+.lightmagic {
+  background: rgba(50, 0, 90, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light-list {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.light-list p {
+  margin-bottom: 14px;
+  color: #e6d8ff;
+  font-size: 1.05em;
+  border-left: 3px solid #a56cff;
+  padding-left: 12px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.light-list p:hover {
+  transform: translateX(4px);
+  color: #fff;
+}
+/* ===== DARK MAGIC ===== */
+.darkmagic {
+  background: rgba(30, 0, 30, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-list {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.dark-list p {
+  margin-bottom: 14px;
+  color: #e6d8ff;
+  font-size: 1.05em;
+  border-left: 3px solid #ff5c5c;
+  padding-left: 12px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.dark-list p:hover {
+  transform: translateX(4px);
+  color: #ff9999;
+}
